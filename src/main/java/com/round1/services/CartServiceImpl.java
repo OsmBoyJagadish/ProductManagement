@@ -107,8 +107,6 @@ public class CartServiceImpl implements CartService {
         cartRepository.save(cart);
     }
 
-    // ---- helpers ----
-
     private Cart getCartByEmail(String email) {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found: " + email));
